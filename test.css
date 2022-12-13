@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+ 
+
+  
+ background-color: #ff8888;
+  padding: 10px 0px;
+}
+
+menu {
+  align-items: center;
+  margin: 0px 150px;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logoH1 {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+}
+
+#logoNav {
+  height: 60px;
+  margin: 10px;
+}
+
+ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  align-items: center;
+  letter-spacing: 1px;
+}
+
+ul>li {
+
+  border-radius: 5px;
+  height: 20px;
+}
+
+ul>a {
+  transition: 0.5s;
+}
+
+ul>a:hover {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+
+
+}
+
+a {
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+
+}
+
+/* DEBUT MAIN*/
+
+main {
+  margin: 0px 300px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+#backgroundImg1 {
+  background-image: url("./assets/maquette ECF/4k/flat.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 220px;
+  width: 900px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#overlayImg1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px 35px;
+}
+
+#concept {
+  font-size: 18px ;
+  text-align: center;
+  width: 400px;
+  margin-left: 30px;
+}
+
+#week {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+h5 {
+  border-top: 1px black solid;
+  padding: 20px;
+  letter-spacing: 8px;
+  font-weight: lighter;
+}
+
+.days {
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgDays {
+  width: 350px;
+  margin: 0px 80px;
+}
+
+.imgWrap {
+  display: flex;
+ 
+}
+
+.nameType {
+  font-size: 16px;
+}

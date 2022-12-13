@@ -1,0 +1,154 @@
+/* IMPORTATION DU FONT-FAMILY : DANCING SCRIPT & NOTO SANS JAPANESE */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+/* AFFECTATION DE VARIABLES  */
+:root {
+  --color-primary : #E6621C;
+  --color-secondary : #538DEB;
+  --color-gray : #707070;
+  --color-white : #F2FBFF;
+  --font-family-title : 'Dancing Script', cursive;
+  --font-family-text : 'Noto Sans JP', sans-serif;;
+}
+
+/* Reset Du Body  */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  font-size: 18px;
+  font-family: var(--font-family-text);
+  height: 250vh;
+}
+
+/* STYLE // TAILLE DE LA POLICE DES TITRES  */
+h1, h2 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--font-family-title);
+  color: var(--color-primary);
+  margin-left: 10%;
+  -webkit-text-stroke: medium;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+/* DISCLAIMER, C'est important */
+.disclaimer {
+  display: block;
+  width: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px auto;
+  color: var(--color-primary);
+  border: 5px outset var(--color-secondary);
+  transition: 1s;
+  font-weight: bold;
+}
+
+/* BARRE DE NAVIGATION  */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12.5vh;
+  background-color: var(--color-primary);
+}
+
+#logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 3rem;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 3rem;
+}
+
+nav ul li {
+  display: flex;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  background-color: var(--color-white);
+  text-decoration: none;
+  color: var(--color-secondary);
+  padding: 2px 7px;
+}
+
+/* PARTIE HAUT DE PAGE : PRÉSENTATION  */
+#top-left {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  width: 40%;
+  margin: auto;
+  background-color: red;
+  background-color: var(--color-gray);
+  min-height: -webkit-fill-available;
+}
+
+#top-left h1 {
+  padding-top: 15px;
+  text-align: center;
+  margin: auto;
+}
+
+#top-left p {
+  margin: 0 10%;
+  color: var(--color-white);
+  letter-spacing: 2px;
+}
+
+/* IMAGE DE FOND : HAUT DE PAGE  */
+figure {
+  margin: 0;
+}
+
+#bg-image1 {
+  height:87.5vh;
+  margin-right: auto;
+  background-image: url(/public/image/image-bg1.jpg);
+  background-attachment: fixed;
+  background-size: 60%, contain;
+  background-repeat: no-repeat;
+  background-position:top right;
+}
+
+#bg-image2 {
+  background-image: url(/public/image/image-bg2.jpg);
+  background-attachment: fixed;
+  background-size: 60%, contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  height:70vh;
+  margin-right: auto;
+}
+
+/* PARTIE : MILIEU DE PAGE : SUGGESTIONS */
+
+#mid-right {
+  position: absolute;
+  width: 40%;
+  margin-left: 60%;
+  background-color: var(--color-gray);
+  color: var(--color-white);
+  height: 70vh;
+}
+
+#mid-right h2 {
+  padding-top: 15px;
+  text-align: center;
+  margin: 10% auto;
+}
+
+#mid-right p {
+  margin: 0px 10%;
+  letter-spacing: 2px;
+}
