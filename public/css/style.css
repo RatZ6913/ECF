@@ -91,7 +91,7 @@ nav ul li a {
   margin: auto;
   background-color: red;
   background-color: var(--color-gray);
-  min-height: -webkit-fill-available;
+  height: 87.5vh;
 }
 
 #top-left h1 {
