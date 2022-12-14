@@ -26,10 +26,10 @@ async function getFetch() {
     let nameMeal = document.createElement('h4');
     nameMeal.classList.add('nameMeal');
     nameMeal.textContent = meals.strMeal;
-    let arrDays = ["Monday", "Tuesday","Wednesday", "Thursday","Friday"];
+    let arrDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     let days = document.createElement('p');
     days.style.textAlign = "center";
-    days.style.color ="#707070";
+    days.style.color = "#707070";
     days.textContent = arrDays[i];
     boxInContent.append(nameMeal);
     figure.prepend(days);
@@ -49,16 +49,6 @@ async function getFetch() {
       imgDish.style.border = "none";
     });
 
-
-
-    console.log(meals.strIngredient19);
-    console.log(meals.strIngredient18);
-    console.log(meals.strIngredient17);
-    console.log(meals.strIngredient16);
-    console.log(meals.strIngredient14);
-    console.log(meals.strIngredient15);
-   
-
     // Reprends ses valeurs de base à la sortie de l'image
     imgDish.addEventListener("mouseleave", () => {
       imgDish.style.backgroundImage =
@@ -66,9 +56,6 @@ async function getFetch() {
       imgDish.style.transition = "0.5s";
       imgDish.style.borderRadius = "0px";
     });
-
-
-    // console.log(meals.strIngredient20);
 
 
     // Modale
@@ -83,9 +70,10 @@ async function getFetch() {
       from.textContent += meals.strArea;
 
 
+      // Si l'ingrédient == null. Alors l'ingrédient ne prendra aucune valeur sinon crée <p> Nom Ingrédient </p>
       meals.strIngredient1 === null ? meals.strIngredient1 = "" : ingredients.innerHTML = `<p>${meals.strIngredient1}</p>`;
       meals.strIngredient2 === null ? meals.strIngredient2 = "" : ingredients.innerHTML += `<p>${meals.strIngredient2}</p>`;
-      meals.strIngredient3 === null ? meals.strIngredient3 = "" : ingredients.innerHTML += `<p>${meals.strIngredien3}</p>`;
+      meals.strIngredient3 === null ? meals.strIngredient3 = "" : ingredients.innerHTML += `<p>${meals.strIngredient3}</p>`;
       meals.strIngredient4 === null ? meals.strIngredient4 = "" : ingredients.innerHTML += `<p>${meals.strIngredient4}</p>`;
       meals.strIngredient5 === null ? meals.strIngredient5 = "" : ingredients.innerHTML += `<p>${meals.strIngredient5}</p>`;
       meals.strIngredient6 === null ? meals.strIngredient6 = "" : ingredients.innerHTML += `<p>${meals.strIngredient6}</p>`;
@@ -93,21 +81,16 @@ async function getFetch() {
       meals.strIngredient8 === null ? meals.strIngredient8 = "" : ingredients.innerHTML += `<p>${meals.strIngredient8}</p>`;
       meals.strIngredient9 === null ? meals.strIngredient9 = "" : ingredients.innerHTML += `<p>${meals.strIngredient9}</p>`;
       meals.strIngredient10 === null ? meals.strIngredient10 = "" : ingredients.innerHTML += `<p>${meals.strIngredient10}</p>`;
-      meals.strIngredient11 === null ? meals.strIngredient11 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient11}</p>`;
-      meals.strIngredient12 === null ? meals.strIngredient12 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient12}</p>`;
-      meals.strIngredient13 === null ? meals.strIngredient13 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient13}</p>`;
-      meals.strIngredient14 === null ? meals.strIngredient14 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient14}</p>`;
+      meals.strIngredient11 === null ? meals.strIngredient11 = "" : ingredients.innerHTML += `<p>${meals.strIngredient11}</p>`;
+      meals.strIngredient12 === null ? meals.strIngredient12 = "" : ingredients.innerHTML += `<p>${meals.strIngredient12}</p>`;
+      meals.strIngredient13 === null ? meals.strIngredient13 = "" : ingredients.innerHTML += `<p>${meals.strIngredient13}</p>`;
+      meals.strIngredient14 === null ? meals.strIngredient14 = "" : ingredients.innerHTML += `<p>${meals.strIngredient14}</p>`;
       meals.strIngredient15 === null ? meals.strIngredient15 = "" : ingredients.innerHTML += `<p>${meals.strIngredient15}</p>`;
-      meals.strIngredient16 === null ? meals.strIngredient16 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient16}</p>`;
-      meals.strIngredient17 === null ? meals.strIngredient17 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient17}</p>`;
-      meals.strIngredient18 === null ? meals.strIngredient18 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient18}</p>`;
-      meals.strIngredient19 === null ? meals.strIngredient19 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient19}</p>`;
-      meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient20}</p>`;
-
-    
-
-
-
+      meals.strIngredient16 === null ? meals.strIngredient16 = "" : ingredients.innerHTML += `<p>${meals.strIngredient16}</p>`;
+      meals.strIngredient17 === null ? meals.strIngredient17 = "" : ingredients.innerHTML += `<p>${meals.strIngredient17}</p>`;
+      meals.strIngredient18 === null ? meals.strIngredient18 = "" : ingredients.innerHTML += `<p>${meals.strIngredient18}</p>`;
+      meals.strIngredient19 === null ? meals.strIngredient19 = "" : ingredients.innerHTML += `<p>${meals.strIngredient19}</p>`;
+      meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML += `<p>${meals.strIngredient20}</p>`;
 
       modal.showModal();
     })
