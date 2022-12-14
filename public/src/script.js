@@ -2,9 +2,13 @@ let content = document.querySelector("#content");
 let modal = document.querySelector('#modal');
 let contentMeal = document.querySelector('#contentMeal');
 let modalLeft = document.querySelector('#modal-left');
-let modalRight = document.querySelector('#modal-right');
 let from = document.querySelector('#from');
+let modalRight = document.querySelector('#modal-right');
 let ingredients = document.createElement('p');
+let description = document.createElement('p');
+let modalVideo = document.querySelector('#modalVideo');
+let video = document.createElement('VIDEO');
+
 
 async function getFetch() {
   for (let i = 0; i < 5; i++) {
@@ -57,18 +61,36 @@ async function getFetch() {
       imgDish.style.borderRadius = "0px";
     });
 
-
-    // Modale
+    console.log(meals);
+    // Ouvre une fenêtre modale au click
     imgDish.addEventListener('click', () => {
       modal.append(contentMeal);
       contentMeal.prepend(nameMeal);
-      modalLeft.append(imgDish);
-      nameMeal.style.width = "100%";
-      modalLeft.append(from);
+      modalLeft.append(imgDish, from, description);
       modalRight.append(ingredients);
+      modalVideo.append(video);
 
-      from.textContent += meals.strArea;
+      nameMeal.style.width = "100%";
+      from.textContent += meals.strArea; // Origine du plat
+      description.textContent = meals.strInstructions; // Instruction de la Recette
+      video.src = meals.strYoutube;
+      video.autoplay = false;
+      video.controls = true;
+      video.muted = false;
+      video.height = "240px";
+      video.width = "320px";
 
+      if (video.canPlayType('video/mp4')) {
+  console.log('set src to mp4 video');
+
+  video.src = 'my-video.mp4'
+} else if (video.canPlayType('video/ogg')) {
+  console.log('set src to ogg video');
+
+  video.src = 'my-video.ogg'
+} else {
+  console.log('provide link to user');
+}
 
       // Si l'ingrédient == null. Alors l'ingrédient ne prendra aucune valeur sinon crée <p> Nom Ingrédient </p>
       meals.strIngredient1 === null ? meals.strIngredient1 = "" : ingredients.innerHTML = `<p>${meals.strIngredient1}</p>`;

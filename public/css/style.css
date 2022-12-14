@@ -346,22 +346,29 @@ h6 {
 #modal-left {
   background-color: red;
   width: 45%;
-  height: 35vh;
+  height: 50vh;
+  overflow: scroll;
 }
 
 #modal-right {
   background-color: gold;
   width: 50%;
-  height: 40vh;
+  overflow: scroll;
+  height: 20vh;
 }
 
 #modalVideo {
-  width: 45%;
-  height: 45vh;
-  /* background-color: green; */
+  width: 320px;
+  height: 240px;
+  overflow: scroll;
+  /* background-color: white; */
 }
 
-
+/* #video {
+  width: 320px;
+  height: 240px;
+  /* background-color: white; */
+ 
 
 
 
