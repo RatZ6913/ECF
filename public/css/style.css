@@ -180,15 +180,40 @@ span img {
 }
 
 /* Articles : Suggestions de Plats  */
-
 #img-bg3 {
   position: absolute;
-  background-image: url(/public/image/image-bg3.png);
+  background-image: url(/ECF/public/image/image-bg3.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 80vh;
   width: 100%;
 }
 
+ #divBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+ }
 
+.div1, 
+.div2, 
+.div3, 
+.div4, 
+.div5 {
+  width: 25%;
+  height: 250px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+} 
 
+.div1 {
+  width: 25%;
+}
+
+.div2 {
+  width: 25%;
+}
