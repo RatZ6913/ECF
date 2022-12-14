@@ -126,6 +126,7 @@ figure {
 
 #bg-image1 {
   height: 87.5vh;
+  min-height: 87.5vh;
   margin-right: auto;
   background-image: url(/ECF/public/image/image-bg1.jpg);
   background-attachment: fixed;
@@ -220,7 +221,7 @@ span img {
 
 /* Stylisation des Images */
 .imgDish {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 250px;
   height: 250px;
   background-size: contain;
@@ -229,6 +230,13 @@ span img {
   background-image: url(/ECF/public/image/click.jpg);
   border: 1px solid var(--color-secondary);
   cursor: pointer;
+}
+
+h4 {
+  color: var(--color-secondary);
+  width: 150px;
+  text-align: center;
+  margin: auto;
 }
 
 /* PARTIE : FOOTER  */
@@ -261,9 +269,8 @@ footer section {
 #footer-left {
   background-color: var(--color-gray);
   width: 35%;
-  margin: 50px auto;
+  /* margin: 50px auto; */
   padding-bottom: 15px;
-  border-radius: 10px;
 }
 
 #footer-left img {
@@ -279,9 +286,12 @@ footer section {
 
 #footer-right {
   width: 35%;
-  margin: 50px auto;
-  border-radius: 10px;
+  /* margin: 50px auto; */
   background-color: var(--color-gray);
+}
+
+#footer-right a {
+  color: var(--color-white);
 }
 
 #footer-right span {
@@ -295,11 +305,36 @@ footer section {
   text-align: center;
 }
 
-h4 {
-  text-align: right;
+h6 {
+  text-align: center;
   color: var(--color-white);
+  margin: 0;
+  margin-right: 15px;
 }
 
-h4 a {
+h6 a {
   text-decoration: none;
+}
+
+/* PARTIE : MODALE  */
+#modal {
+  border: none;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  text-align: -webkit-center;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+#modal::backdrop {
+  background-color: #e6621c;
+  opacity: 50%;
+  border: none;
+}
+
+#contentMeal {
+  width: 100%;
+  height: 25vh;
+  background-color: var(--color-white);
 }
