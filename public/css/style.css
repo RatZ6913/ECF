@@ -18,7 +18,7 @@ body {
   background-color: var(--color-white);
   font-size: 18px;
   font-family: var(--font-family-text);
-  height: 250vh;
+  background-color: wheat;
 }
 
 /* STYLE // TAILLE DE LA POLICE DES TITRES  */
@@ -182,11 +182,9 @@ span img {
 
 /* ARTICLES : SUGGESTIONS DE PLATS  */
 #bgImg {
-  position: absolute;
   background-image: url(/ECF/public/image/image-bg3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80vh;
   width: 100%;
 }
 
@@ -236,3 +234,58 @@ span img {
 }
 
 
+
+/* PARTIE : FOOTER  */
+footer {
+  background-color: var(--color-primary);
+}
+
+footer h2 {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 5px solid var(--color-primary);
+  margin: 10px auto;
+  text-align: center;
+  width: 25%;
+}
+
+footer h3 {
+  width: auto;
+  color: var(--color-white);
+  border: none;
+  text-decoration: 3px underline;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-around;
+}
+
+#footer-left {
+  background-color: var(--color-gray);
+  width: 35%;
+  margin: 50px auto;
+  padding-bottom: 15px;
+}
+
+#footer-left img {
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+
+#footer-left span {
+  color: var(--color-white);
+  margin: 10%;
+}
+
+#footer-right {
+  width: 35%;
+  margin: 50px auto;
+
+  background-color: var(--color-gray);
+}
+
+/* PAGE : MENU.html */
+#ts-title {
+  text-align: center;
+}
