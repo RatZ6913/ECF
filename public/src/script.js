@@ -1,13 +1,17 @@
 let content = document.querySelector("#content");
 let modal = document.querySelector('#modal');
 let contentMeal = document.querySelector('#contentMeal');
-// let days = ["Monday", "Tuesday","Wednesday", "Thursday","Friday"];
+let modalLeft = document.querySelector('#modal-left');
+let modalRight = document.querySelector('#modal-right');
+let from = document.querySelector('#from');
+let ingredients = document.createElement('p');
 
 async function getFetch() {
   for (let i = 0; i < 5; i++) {
     let getData = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
     let showData = await getData.json();
-    console.log(showData);
+    let meals = showData.meals[0];
+    // console.log(showData);
 
     // Création : <DIV> à chaque itération et l'insérer dans la Section(Content)
     let boxInContent = document.createElement("div");
@@ -20,7 +24,8 @@ async function getFetch() {
 
     // Création Titre du plat et texte pour le jour
     let nameMeal = document.createElement('h4');
-    nameMeal.textContent = showData.meals[0].strMeal;
+    nameMeal.classList.add('nameMeal');
+    nameMeal.textContent = meals.strMeal;
     let arrDays = ["Monday", "Tuesday","Wednesday", "Thursday","Friday"];
     let days = document.createElement('p');
     days.style.textAlign = "center";
@@ -34,7 +39,7 @@ async function getFetch() {
     imgDish.classList.add("imgDish");
     figure.append(imgDish);
     imgDish.style.backgroundImage =
-      "url('" + showData.meals[0].strMealThumb + "')";
+      "url('" + meals.strMealThumb + "')";
 
     // Changement d'image pour informer l'utilisateur que l'image est clickable
     imgDish.addEventListener("mouseover", () => {
@@ -44,19 +49,65 @@ async function getFetch() {
       imgDish.style.border = "none";
     });
 
+
+
+    console.log(meals.strIngredient19);
+    console.log(meals.strIngredient18);
+    console.log(meals.strIngredient17);
+    console.log(meals.strIngredient16);
+    console.log(meals.strIngredient14);
+    console.log(meals.strIngredient15);
+   
+
     // Reprends ses valeurs de base à la sortie de l'image
     imgDish.addEventListener("mouseleave", () => {
       imgDish.style.backgroundImage =
-        "url('" + showData.meals[0].strMealThumb + "')";
+        "url('" + meals.strMealThumb + "')";
       imgDish.style.transition = "0.5s";
       imgDish.style.borderRadius = "0px";
     });
 
+
+    // console.log(meals.strIngredient20);
+
+
     // Modale
     imgDish.addEventListener('click', () => {
-
-      
       modal.append(contentMeal);
+      contentMeal.prepend(nameMeal);
+      modalLeft.append(imgDish);
+      nameMeal.style.width = "100%";
+      modalLeft.append(from);
+      modalRight.append(ingredients);
+
+      from.textContent += meals.strArea;
+
+
+      meals.strIngredient1 === null ? meals.strIngredient1 = "" : ingredients.innerHTML = `<p>${meals.strIngredient1}</p>`;
+      meals.strIngredient2 === null ? meals.strIngredient2 = "" : ingredients.innerHTML += `<p>${meals.strIngredient2}</p>`;
+      meals.strIngredient3 === null ? meals.strIngredient3 = "" : ingredients.innerHTML += `<p>${meals.strIngredien3}</p>`;
+      meals.strIngredient4 === null ? meals.strIngredient4 = "" : ingredients.innerHTML += `<p>${meals.strIngredient4}</p>`;
+      meals.strIngredient5 === null ? meals.strIngredient5 = "" : ingredients.innerHTML += `<p>${meals.strIngredient5}</p>`;
+      meals.strIngredient6 === null ? meals.strIngredient6 = "" : ingredients.innerHTML += `<p>${meals.strIngredient6}</p>`;
+      meals.strIngredient7 === null ? meals.strIngredient7 = "" : ingredients.innerHTML += `<p>${meals.strIngredient7}</p>`;
+      meals.strIngredient8 === null ? meals.strIngredient8 = "" : ingredients.innerHTML += `<p>${meals.strIngredient8}</p>`;
+      meals.strIngredient9 === null ? meals.strIngredient9 = "" : ingredients.innerHTML += `<p>${meals.strIngredient9}</p>`;
+      meals.strIngredient10 === null ? meals.strIngredient10 = "" : ingredients.innerHTML += `<p>${meals.strIngredient10}</p>`;
+      meals.strIngredient11 === null ? meals.strIngredient11 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient11}</p>`;
+      meals.strIngredient12 === null ? meals.strIngredient12 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient12}</p>`;
+      meals.strIngredient13 === null ? meals.strIngredient13 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient13}</p>`;
+      meals.strIngredient14 === null ? meals.strIngredient14 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient14}</p>`;
+      meals.strIngredient15 === null ? meals.strIngredient15 = "" : ingredients.innerHTML += `<p>${meals.strIngredient15}</p>`;
+      meals.strIngredient16 === null ? meals.strIngredient16 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient16}</p>`;
+      meals.strIngredient17 === null ? meals.strIngredient17 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient17}</p>`;
+      meals.strIngredient18 === null ? meals.strIngredient18 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient18}</p>`;
+      meals.strIngredient19 === null ? meals.strIngredient19 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient19}</p>`;
+      meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML +=`<p>${meals.strIngredient20}</p>`;
+
+    
+
+
+
 
       modal.showModal();
     })
