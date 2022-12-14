@@ -43,10 +43,12 @@ h3 {
   font-size: 20px;
   text-align: center;
   -webkit-text-stroke: medium;
-  border-bottom: 10px solid var(--color-white);
+  border-bottom: 8px solid var(--color-secondary);
   width: 20%;
   margin: auto;
   margin-top: 10px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 /* DISCLAIMER, C'est important */
@@ -144,7 +146,6 @@ figure {
 }
 
 /* PARTIE : MILIEU DE PAGE : SUGGESTIONS */
-
 #mid-right {
   position: absolute;
   width: 40%;
@@ -179,8 +180,8 @@ span img {
   margin-right: 15%;
 }
 
-/* Articles : Suggestions de Plats  */
-#img-bg3 {
+/* ARTICLES : SUGGESTIONS DE PLATS  */
+#bgImg {
   position: absolute;
   background-image: url(/ECF/public/image/image-bg3.jpg);
   background-size: cover;
@@ -189,31 +190,42 @@ span img {
   width: 100%;
 }
 
- #divBox {
+/* // SPAN : DÉCORATION. EN BAS DU TITRE H3 */
+.row {
+  display: block;
+  width: 250px;
+  height: 7px;
+  margin: 5px auto;
+  background-color: var(--color-secondary);
+  border-radius: 25px;
+}
+
+.row:nth-child(3){
+  width: 100px;
+  height: 6px;
+}
+
+/* BOÎTE QUI CONTIENDRA LE SCRIPT.JS */
+ #content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 80%;
   margin: auto;
+  place-content: center;
  }
 
-.div1, 
-.div2, 
-.div3, 
-.div4, 
-.div5 {
-  width: 25%;
-  height: 250px;
-  background-color: red;
-  display: flex;
-  flex-direction: column;
-  margin: 15px;
-} 
 
-.div1 {
-  width: 25%;
+/* STYLISATION : SCRIPT.JS */
+.boxDish  {
+  margin:15px 5%;
 }
 
-.div2 {
-  width: 25%;
+.imgDish {
+  margin-top: 50px;
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
