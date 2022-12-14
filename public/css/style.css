@@ -1,14 +1,14 @@
 /* IMPORTATION DU FONT-FAMILY : DANCING SCRIPT & NOTO SANS JAPANESE */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
 
 /* AFFECTATION DE VARIABLES  */
 :root {
-  --color-primary : #E6621C;
-  --color-secondary : #538DEB;
-  --color-gray : #707070;
-  --color-white : #F2FBFF;
-  --font-family-title : 'Dancing Script', cursive;
-  --font-family-text : 'Noto Sans JP', sans-serif;;
+  --color-primary: #e6621c;
+  --color-secondary: #538deb;
+  --color-gray: #707070;
+  --color-white: #f2fbff;
+  --font-family-title: "Dancing Script", cursive;
+  --font-family-text: "Noto Sans JP", sans-serif;
 }
 
 /* Reset Du Body  */
@@ -18,11 +18,12 @@ body {
   background-color: var(--color-white);
   font-size: 18px;
   font-family: var(--font-family-text);
-  height: 250vh;
 }
 
 /* STYLE // TAILLE DE LA POLICE DES TITRES  */
-h1, h2 {
+h1,
+h2,
+h3 {
   font-size: 28px;
   font-weight: 700;
   font-family: var(--font-family-title);
@@ -35,6 +36,18 @@ h1, h2 {
 
 h2 {
   font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  -webkit-text-stroke: medium;
+  border-bottom: 8px solid var(--color-secondary);
+  width: 20%;
+  margin: auto;
+  margin-top: 10px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 /* DISCLAIMER, C'est important */
@@ -78,7 +91,7 @@ nav ul li {
 nav ul li a {
   background-color: var(--color-white);
   text-decoration: none;
-  color: var(--color-secondary);
+  color: var(--color-gray);
   padding: 2px 7px;
 }
 
@@ -112,13 +125,13 @@ figure {
 }
 
 #bg-image1 {
-  height:87.5vh;
+  height: 87.5vh;
   margin-right: auto;
   background-image: url(/ECF/public/image/image-bg1.jpg);
   background-attachment: fixed;
   background-size: 60%, contain;
   background-repeat: no-repeat;
-  background-position:top right;
+  background-position: top right;
 }
 
 #bg-image2 {
@@ -127,12 +140,11 @@ figure {
   background-size: 60%, contain;
   background-repeat: no-repeat;
   background-position: left;
-  height:70vh;
+  height: 70vh;
   margin-right: auto;
 }
 
 /* PARTIE : MILIEU DE PAGE : SUGGESTIONS */
-
 #mid-right {
   position: absolute;
   width: 40%;
@@ -151,4 +163,143 @@ figure {
 #mid-right p {
   margin: 0px 10%;
   letter-spacing: 2px;
+}
+
+#info {
+  display: block;
+  text-align: right;
+  margin-right: 10%;
+  margin-top:15%;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+span img {
+  margin-top: 5%;
+  margin-right: 15%;
+}
+
+/* ARTICLES : SUGGESTIONS DE PLATS  */
+#bgImg {
+  background-image: url(/ECF/public/image/image-bg3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+/* // SPAN : DÉCORATION. EN BAS DU TITRE H3 */
+.row {
+  display: block;
+  width: 250px;
+  height: 7px;
+  margin: 5px auto;
+  background-color: var(--color-secondary);
+  border-radius: 25px;
+}
+
+.row:nth-child(3){
+  width: 100px;
+  height: 6px;
+}
+
+/* BOÎTE QUI CONTIENDRA LE SCRIPT.JS */
+ #content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  place-content: center;
+ }
+
+/* STYLISATION : SCRIPT.JS */
+/* Boîte Pour les Image des plats */
+.boxDish {
+  margin:15px 5%;
+}
+
+/* Stylisation des Images */
+.imgDish {
+  margin-top: 50px;
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/ECF/public/image/click.jpg);
+  border: 1px solid var(--color-secondary);
+  cursor: pointer;
+}
+
+/* PARTIE : FOOTER  */
+footer {
+  background-color: var(--color-primary);
+}
+
+footer h2 {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 5px solid var(--color-primary);
+  margin: 10px auto;
+  text-align: center;
+  width: 25%;
+}
+
+footer h3 {
+  width: auto;
+  color: var(--color-white);
+  border: none;
+  text-decoration: 3px underline;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* PARTIE COORDONNÉES  */
+#footer-left {
+  background-color: var(--color-gray);
+  width: 35%;
+  margin: 50px auto;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+
+#footer-left img {
+  margin: 10px 10px auto;
+  vertical-align: bottom;
+}
+
+#footer-left span {
+  color: var(--color-white);
+  margin-left: 15%;
+  font-size: 16px;
+}
+
+#footer-right {
+  width: 35%;
+  margin: 50px auto;
+  border-radius: 10px;
+  background-color: var(--color-gray);
+}
+
+#footer-right span {
+  color: var(--color-white);
+  margin-left: 15%;
+  font-size: 16px;
+}
+
+/* PAGE : MENU.html */
+#ts-title {
+  text-align: center;
+}
+
+h4 {
+  text-align: right;
+  color: var(--color-white);
+}
+
+h4 a {
+  text-decoration: none;
 }

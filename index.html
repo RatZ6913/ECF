@@ -1,69 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:700px)"
+      href="./public/css/style.mobile.css"
+    />
+    <script src="./public/src/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Flavors Of The Weak</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./public/css/style.css">
-  <link rel="stylesheet" media="screen and (max-width:700px)" href="./public/css/style.mobile.css">
-  <script src="./public/src/script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
-    rel="stylesheet">
-  <title>Flavors Of The Weak</title>
-</head>
+  <body>
+    <main>
+      <header>
+        <!-- BARRE DE NAVIGATION -->
+        <nav>
+          <figure>
+            <img
+              src="./public/image/FOTW.jpg"
+              alt="logo-Flavors-of-the-week"
+              id="logo"
+            />
+          </figure>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Suggestions</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-<body>
-  <main>
-    <header>
-      <!-- BARRE DE NAVIGATION -->
-      <nav>
-        <figure>
-          <img src="./public/image/FOTW.jpg" alt="logo-Flavors-of-the-week" id="logo">
-        </figure>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Suggestions</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+      <section id="top-page">
+        <div id="top-left">
+          <h1>Flavors Of The Weak</h1>
+          <p>
+            Welcome to Flavors Of The Week! Here you will have a list of five
+            meals, for the week (Monday - Friday). With different flavors and
+            tastes, your family or friends, will not be disappointed. You are
+            free to cook, alone or with your friends, for more conviviality...
+            <br />
+            Share a moment of gustatory pleasures with joy and good humor. Turn
+            on the stoves, take out the knives, and prepare the recipe like a
+            Chef!
+          </p>
+        </div>
+        <!-- IMAGE BACKGROUND : FIXED -->
+        <div>
+          <figure id="bg-image1"></figure>
+        </div>
+      </section>
 
-    <section id="top-page">
-      <div id="top-left">
-        <h1>Flavors Of The Weak</h1>
-        <p>Welcome to Flavors Of The Week! Here you will have a list of five meals, for the week (Monday - Friday). With
-          different flavors and tastes, your family or friends, will not be disappointed.
-          You are free to cook, alone or with your friends, for more conviviality... <br>
-          Share a moment of gustatory pleasures with joy and good humor. Turn on the stoves, take out the knives, and
-          prepare the recipe like a Chef!</p>
-      </div>
-      <!-- IMAGE BACKGROUND : FIXED -->
-      <div>
-        <figure id="bg-image1"></figure>
-      </div>
-    </section>
+      <!-- PETIT DISCLAIMER. MÊME À VOUS CEUX QUI CORRIGENT LE CODE !! -->
+      <span class="disclaimer"
+        >Don't forget to eat 5 fruits and vegetables per day !</span
+      >
 
-    <!-- PETIT DISCLAIMER. MÊME À VOUS CEUX QUI CORRIGENT LE CODE !! -->
-    <span class="disclaimer">Don't forget to eat 5 fruits and vegetables per day !</span>
+      <section id="mid-page">
+        <div id="mid-right">
+          <h2>Suggestions</h2>
+          <p>
+            Here is the list of meal suggestions for the week! You will have a
+            technical sheet and their respective ingredients. If you are
+            allergic to a food or your little brother hates vegetables? Don't
+            panic, we have fish, red meat, poultry ... And so on! It's up to you
+            to prepare your set-up and your apron! And impress your guests.
+          </p>
+          <span id="info"
+            >Find our proposals below <br />
+            <img src="./public/image/arrow.png" alt="icon-arrow-down-left" />
+          </span>
+        </div>
+        <div>
+          <figure id="bg-image2"></figure>
+        </div>
+      </section>
 
-    <section id="mid-page">
-      <div id="mid-right">
-        <h2>Suggestions</h2>
-        <p>Here is the list of meal suggestions for the week! You will have a technical sheet and their respective
-          ingredients.
-          If you are allergic to a food or your little brother hates vegetables? Don't panic, we have fish, red meat,
-          poultry ... And so on! It's up to you to prepare your set-up and your apron! And impress your guests.
-        </p>
-      </div>
-      <div>
-        <figure id="bg-image2"></figure>
-      </div>
-    </section>
-  </main>
-</body>
+      <!-- LISTES DES PLATS   -->
+      <article>
+        <div id="bgImg">
+          <h3>Our menu food</h3>
+          <span class="row"></span>
+          <span class="row"></span>
+          <section id="content">
+            <!-- <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+            <div class="div4"></div>
+            <div class="div5"></div> -->
+          </section>
+        </div>
+      </article>
+      <span class="disclaimer"
+        >Remember ! 5 fruits and vegetables per day !</span
+      >
+    </main>
 
+    <footer>
+      <h2>Contact</h2>
+      <section>
+        <div id="footer-left">
+          <h3>Coordonnées :</h3>
+          <span><img src="/ECF/public/image/adress.png" alt="logo-location">: France - Arles 13200</span><br>
+          <span><img src="/ECF/public/image/mail.png" alt="logo-mail">: fotw@gmail.com</span><br>
+          <span><img src="/ECF/public/image/tel.png" alt="logo-mobile">: 06.06.06.06.06</span><br>
+        </div>
+        <div id="footer-right">
+          <h3>Credits :</h3>
+          <span>Made by : PHEAK Rattana</span><br>
+          <span>API source : https://www.themealdb.com/</span><br>
+          <span>Image source : https://www.pexels.com/fr-fr/</span><br>
+          <span>Icons Source : https://icones8.fr/</span>
+        </div>
+      </section>
+      <h4>© Designed by <a href="https://github.com/RatZ6913">RatZ </a> @ 2022  </h4>
+    </footer>
+  </body>
 </html>
+
+
+
+
+
+
