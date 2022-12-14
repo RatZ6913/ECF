@@ -217,10 +217,13 @@ span img {
 
 
 /* STYLISATION : SCRIPT.JS */
-.boxDish  {
+
+/* Boîte Pour les Image des plats */
+.boxDish {
   margin:15px 5%;
 }
 
+/* Stylisation des Images */
 .imgDish {
   margin-top: 50px;
   width: 250px;
@@ -228,4 +231,8 @@ span img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url(/ECF/public/image/click.jpg);
+  border: 1px solid var(--color-secondary);
 }
+
+
