@@ -1,14 +1,14 @@
 /* IMPORTATION DU FONT-FAMILY : DANCING SCRIPT & NOTO SANS JAPANESE */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
 
 /* AFFECTATION DE VARIABLES  */
 :root {
-  --color-primary : #E6621C;
-  --color-secondary : #538DEB;
-  --color-gray : #707070;
-  --color-white : #F2FBFF;
-  --font-family-title : 'Dancing Script', cursive;
-  --font-family-text : 'Noto Sans JP', sans-serif;;
+  --color-primary: #e6621c;
+  --color-secondary: #538deb;
+  --color-gray: #707070;
+  --color-white: #f2fbff;
+  --font-family-title: "Dancing Script", cursive;
+  --font-family-text: "Noto Sans JP", sans-serif;
 }
 
 /* Reset Du Body  */
@@ -22,7 +22,9 @@ body {
 }
 
 /* STYLE // TAILLE DE LA POLICE DES TITRES  */
-h1, h2 {
+h1,
+h2,
+h3 {
   font-size: 28px;
   font-weight: 700;
   font-family: var(--font-family-title);
@@ -35,6 +37,16 @@ h1, h2 {
 
 h2 {
   font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  -webkit-text-stroke: medium;
+  border-bottom: 10px solid var(--color-white);
+  width: 20%;
+  margin: auto;
+  margin-top: 10px;
 }
 
 /* DISCLAIMER, C'est important */
@@ -78,7 +90,7 @@ nav ul li {
 nav ul li a {
   background-color: var(--color-white);
   text-decoration: none;
-  color: var(--color-secondary);
+  color: var(--color-gray);
   padding: 2px 7px;
 }
 
@@ -112,13 +124,13 @@ figure {
 }
 
 #bg-image1 {
-  height:87.5vh;
+  height: 87.5vh;
   margin-right: auto;
   background-image: url(/ECF/public/image/image-bg1.jpg);
   background-attachment: fixed;
   background-size: 60%, contain;
   background-repeat: no-repeat;
-  background-position:top right;
+  background-position: top right;
 }
 
 #bg-image2 {
@@ -127,7 +139,7 @@ figure {
   background-size: 60%, contain;
   background-repeat: no-repeat;
   background-position: left;
-  height:70vh;
+  height: 70vh;
   margin-right: auto;
 }
 
@@ -152,3 +164,30 @@ figure {
   margin: 0px 10%;
   letter-spacing: 2px;
 }
+
+#info {
+  display: block;
+  text-align: right;
+  margin-right: 10%;
+  margin-top:15%;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+span img {
+  margin-top: 5%;
+  margin-right: 15%;
+}
+
+/* Articles : Suggestions de Plats  */
+
+#img-bg3 {
+  position: absolute;
+  background-image: url(/ECF/public/image/image-bg3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+}
+
+
