@@ -136,7 +136,7 @@ figure {
   margin-right: auto;
   background-image: url(/ECF/public/image/image-bg1.jpg);
   background-attachment: fixed;
-  background-size: 60%, contain;
+  background-size: 65%, contain;
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -144,7 +144,7 @@ figure {
 #bg-image2 {
   background-image: url(/ECF/public/image/image-bg2.jpg);
   background-attachment: fixed;
-  background-size: 60%, contain;
+  background-size: 65%, contain;
   background-repeat: no-repeat;
   background-position: left;
   height: 70vh;
@@ -177,7 +177,7 @@ figure {
   text-align: right;
   margin-right: 10%;
   margin-top:15%;
-  color: var(--color-white);
+  color: #1364a7;
   font-weight: 700;
 }
 
@@ -453,3 +453,127 @@ h5 a {
 #arrow {
   margin-left: 75%;
 }
+
+
+@media screen and (max-width:1024px) {
+  #bg-image1 {
+    background-size: 100%, contain;
+    height: 85vh;
+    min-height: 85vh;
+  }
+
+  #top-left {
+    width: 50%;
+    height: 85vh;
+  }
+
+  #info {
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 18px;
+  }
+
+  .boxDish figure p {
+    margin: 0;
+  }
+
+  .imgDish {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  body {
+    background-color: lightblue;
+  }
+
+  nav {
+    height: 10vh;
+  }
+
+  #logo {
+    width: 30%;
+  }
+
+  #bg-image1 {
+    background-size: 100%, contain;
+    height: 60vh;
+    min-height: 20vh;
+  }
+
+  #bg-image2 {
+    height: 70vh;
+    min-height: 70vh;
+    margin-right: auto;
+    background-size: 100%, contain;
+  }
+
+  #top-left {
+    width: 50%;
+    height: 60vh;
+  }
+
+  #top-left h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 0;
+  }
+
+  #top-left p {
+    letter-spacing: 0;
+    margin:0px 1rem;
+  }
+
+  #mid-right h2 {
+    padding: 0;
+    margin: 1rem auto;
+    font-size: 18px;
+  }
+
+  #mid-right p {
+    margin: 0px 1rem;
+    letter-spacing: 0;
+  }
+
+  #info {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  #arrow {
+    margin-left: 35%;
+  }
+
+  .disclaimer {
+    margin: auto;
+    font-size: 16px;
+  }
+
+  #content {
+  width: 100%;
+  }
+
+  #contact {
+    font-size: 18px;
+  }
+
+  footer h3 {
+    font-size: 16px;
+  }
+
+  #footer-left {
+    width: 45%;
+  }
+
+  #footer-right {
+    width: 45%;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+}
+
+
+
+

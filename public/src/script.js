@@ -75,12 +75,12 @@ async function getFetch() {
       // J'appelle ma fonction ingredients();
       ingredient(meals);
 
-      from.textContent = meals.strArea; // Origine du plat
+      from.textContent = "Origin : " +meals.strArea; // Origine du plat
       description.innerHTML = `<h4 style="color:#538deb">Instructions : </h4><br>` + meals.strInstructions; // Instruction de la Recette
       modalVideo.innerHTML = `
         <h4 style="color:#538deb">Need some help ? </h4>
           <p id="textModalVideo">You don't any idea about how to make the recipe...No problem, you have a guide there below</p>
-          <a href=${meals.strYoutube} id="link">
+          <a href=${meals.strYoutube} target="_blank" id="link">
             <img src="/ECF/public/image/youtube.png" alt="logo-mail" id="logoYT">YouTube
           </a>
       `;
@@ -88,7 +88,8 @@ async function getFetch() {
       // modal.style.transition = "2s";
       modal.showModal();
 
-      // J'ajoute un évènement qui empêche de fermer la Modale : avec Touche "Echap"
+      // J'ajoute un évènement qui empêche de fermer la Modale : avec Touche "Echap". 
+      // (Car ça crée des conflits)
       addEventListener('keydown', (e) => {
         switch (e.keyCode) {
           case 27:
@@ -108,7 +109,6 @@ async function getFetch() {
 }
 
 getFetch();
-
 
 
 // Ma Fonction pour les ingrédients
