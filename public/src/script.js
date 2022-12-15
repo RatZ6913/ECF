@@ -83,32 +83,13 @@ async function getFetch() {
           </a>
       `;
 
-      // Si l'ingrédient == null. Alors l'ingrédient ne prendra aucune valeur sinon crée <p> Nom Ingrédient </p>
-      meals.strIngredient1 === null ? meals.strIngredient1 = "" : ingredients.innerHTML = `<p class="ingredient">${meals.strIngredient1}</p>`;
-      meals.strIngredient2 === null ? meals.strIngredient2 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient2}</p>`;
-      meals.strIngredient3 === null ? meals.strIngredient3 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient3}</p>`;
-      meals.strIngredient4 === null ? meals.strIngredient4 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient4}</p>`;
-      meals.strIngredient5 === null ? meals.strIngredient5 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient5}</p>`;
-      meals.strIngredient6 === null ? meals.strIngredient6 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient6}</p>`;
-      meals.strIngredient7 === null ? meals.strIngredient7 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient7}</p>`;
-      meals.strIngredient8 === null ? meals.strIngredient8 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient8}</p>`;
-      meals.strIngredient9 === null ? meals.strIngredient9 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient9}</p>`;
-      meals.strIngredient10 === null ? meals.strIngredient10 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient10}</p>`;
-      meals.strIngredient11 === null ? meals.strIngredient11 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient11}</p>`;
-      meals.strIngredient12 === null ? meals.strIngredient12 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient12}</p>`;
-      meals.strIngredient13 === null ? meals.strIngredient13 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient13}</p>`;
-      meals.strIngredient14 === null ? meals.strIngredient14 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient14}</p>`;
-      meals.strIngredient15 === null ? meals.strIngredient15 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient15}</p>`;
-      meals.strIngredient16 === null ? meals.strIngredient16 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient16}</p>`;
-      meals.strIngredient17 === null ? meals.strIngredient17 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient17}</p>`;
-      meals.strIngredient18 === null ? meals.strIngredient18 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient18}</p>`;
-      meals.strIngredient19 === null ? meals.strIngredient19 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient19}</p>`;
-      meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient20}</p>`;
+      // J'appelle ma fonction ingredients();
+      ingredient(meals);
 
       // modal.style.transition = "2s";
       modal.showModal();
 
-      // J'ajoute un évènement qui empêche de fermer le Modale : avec Touche "Echap"
+      // J'ajoute un évènement qui empêche de fermer la Modale : avec Touche "Echap"
       addEventListener('keydown', (e)=> {        
         switch(e.keyCode){
           case 27:
@@ -129,3 +110,186 @@ async function getFetch() {
 
 getFetch();
 
+
+
+
+
+// Ma Fonction pour les ingrédients
+// Si Ingrédient ou Mesure Différent de Null , alors retourne TRUE. Sinon la valeur de Ingrédient et mesure prendront : ""; (none) 
+let ingredient = (meals) => {
+  if(meals.strIngredient1 !== null || meals.strMeasure1 !== null){
+    ingredients.innerHTML = `<p class="ingredient">${meals.strIngredient1} <span class="measure">${meals.strMeasure1}</span></p>`;
+  } else {
+    meals.strIngredient1 = "";
+    meals.strMeasure1 = "";
+  }
+
+  if(meals.strIngredient2 !== null || meals.strMeasure2 !== null){
+    ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient2} <span class="measure">${meals.strMeasure2}</span></p>`;
+  } else {
+    meals.strIngredient2 = "";
+    meals.strMeasure2 = "";
+  }
+
+  if(meals.strIngredient3 !== null || meals.strMeasure3 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient3} <span class="measure">${meals.strMeasure3}</span></p>
+  `;
+  } else {
+    meals.strIngredient3 += "";
+    meals.strMeasure3 = "";
+  }
+
+  if(meals.strIngredient4 !== null || !meals.strMeasure4 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient4} <span class="measure">${meals.strMeasure4}</span></p>
+  `;
+  } else {
+    meals.strIngredient4 = "";
+    meals.strMeasure4 = "";
+  }
+
+  if(meals.strIngredient5 !== null || meals.strMeasure5 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient5}  <span class="measure">${meals.strMeasure5}</span></p>
+  `;
+  } else {
+    meals.strIngredient5 = "";
+    meals.strMeasure5 = "";
+  }
+
+  if(meals.strIngredient6 !== null || meals.strMeasure6 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient6}  <span class="measure">${meals.strMeasure6}</span></p>
+  `;
+  } else {
+    meals.strIngredient6 = "";
+    meals.strMeasure6 = "";
+  }
+
+  if(meals.strIngredient7 !== null || meals.strMeasure7 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient7}  <span class="measure">${meals.strMeasure7}</span></p>
+  `;
+  } else {
+    meals.strIngredient7 = "";
+    meals.strMeasure7 = "";
+  }
+
+  if(meals.strIngredient8 !== null || meals.strMeasure8 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient8}  <span class="measure">${meals.strMeasure8}</span></p>
+  `;
+  } else {
+    meals.strIngredient8 = "";
+    meals.strMeasure8 = "";
+  }
+
+  if(meals.strIngredient9 !== null || meals.strMeasure9 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient9}  <span class="measure">${meals.strMeasure9}</span></p>
+  `;
+  } else {
+    meals.strIngredient9 = "";
+    meals.strMeasure9 = "";
+  }
+
+  if(meals.strIngredient10 !== null || meals.strMeasure10 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient10}  <span class="measure">${meals.strMeasure10}</span></p>
+  `;
+  } else {
+    meals.strIngredient10 = "";
+    meals.strMeasure10 = "";
+  }
+
+  if(meals.strIngredient11 !== null || meals.strMeasure11 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient11}  <span class="measure">${meals.strMeasure11}</span></p>
+  `;
+  } else {
+    meals.strIngredient11 = "";
+    meals.strMeasure11 = "";
+  }
+
+  if(meals.strIngredient12 !== null || meals.strMeasure12 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient8}  <span class="measure">${meals.strMeasure12}</span></p>
+  `;
+  } else {
+    meals.strIngredient12 = "";
+    meals.strMeasure12 = "";
+  }
+
+  if(meals.strIngredient13 !== null || meals.strMeasure13 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient13}  <span class="measure">${meals.strMeasure13}</span></p>
+  `;
+  } else {
+    meals.strIngredient13 = "";
+    meals.strMeasure13 = "";
+  }
+
+  if(meals.strIngredient14 !== null || meals.strMeasure14 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient14}  <span class="measure">${meals.strMeasure14}</span></p>
+  `;
+  } else {
+    meals.strIngredient14 = "";
+    meals.strMeasure14 = "";
+  }
+
+  if(meals.strIngredient15 !== null || meals.strMeasure15 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient15}  <span class="measure">${meals.strMeasure15}</span></p>
+  `;
+  } else {
+    meals.strIngredient15 = "";
+    meals.strMeasure15 = "";
+  }
+
+  if(meals.strIngredient16 !== null || meals.strMeasure16 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient16}  <span class="measure">${meals.strMeasure16}</span></p>
+  `;
+  } else {
+    meals.strIngredient16 = "";
+    meals.strMeasure16 = "";
+  }
+
+  if(meals.strIngredient17 !== null || meals.strMeasure17 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient17}  <span class="measure">${meals.strMeasure17}</span></p>
+  `;
+  } else {
+    meals.strIngredient17 = "";
+    meals.strMeasure17 = "";
+  }
+
+  if(meals.strIngredient18 !== null || meals.strMeasure18 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient18}  <span class="measure">${meals.strMeasure18}</span></p>
+  `;
+  } else {
+    meals.strIngredient18 = "";
+    meals.strMeasure18 = "";
+  }
+
+  if(meals.strIngredient19 !== null || meals.strMeasure19 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient19}  <span class="measure">${meals.strMeasure19}</span></p>
+  `;
+  } else {
+    meals.strIngredient19 = "";
+    meals.strMeasure19 = "";
+  }
+
+  if(meals.strIngredient20 !== null || meals.strMeasure20 !== null){
+    ingredients.innerHTML += `
+  <p class="ingredient">${meals.strIngredient20}  <span class="measure">${meals.strMeasure20}</span></p>
+  `;
+  } else {
+    meals.strIngredient20 = "";
+    meals.strMeasure20 = "";
+  }
+}

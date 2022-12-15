@@ -384,7 +384,7 @@ h5 a {
 
 #modal-right h4 {
   font-size: 16px;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .modalVideo {
@@ -448,3 +448,6 @@ h5 a {
 
 
 
+.measure {
+  color: var(--color-secondary);
+}
