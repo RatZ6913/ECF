@@ -451,10 +451,11 @@ h5 a {
 }
 
 #arrow {
-  margin-left: 75%;
+  display: block;
+  margin: auto;
 }
 
-
+/* Paramètres pour le responsiv */
 @media screen and (max-width:1024px) {
   #bg-image1 {
     background-size: 100%, contain;
@@ -483,16 +484,12 @@ h5 a {
 }
 
 @media screen and (max-width:768px) {
-  body {
-    background-color: lightblue;
-  }
-
   nav {
     height: 10vh;
   }
 
   #logo {
-    width: 30%;
+    width: 85px;
   }
 
   #bg-image1 {
@@ -540,10 +537,6 @@ h5 a {
     font-size: 14px;
   }
 
-  #arrow {
-    margin-left: 35%;
-  }
-
   .disclaimer {
     margin: auto;
     font-size: 16px;
@@ -573,6 +566,10 @@ h5 a {
     font-size: 14px;
   }
 }
+
+
+
+
 
 
 
