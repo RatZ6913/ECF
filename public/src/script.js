@@ -6,8 +6,11 @@ let from = document.querySelector('#from');
 let modalRight = document.querySelector('#modal-right');
 let ingredients = document.createElement('p');
 let description = document.createElement('p');
-let modalVideo = document.querySelector('#modalVideo');
-let video = document.createElement('VIDEO');
+description.classList.add('description');
+let modalVideo = document.createElement('div');
+modalVideo.classList.add('modalVideo');
+// let modalVideo = document.querySelector('#modalVideo');
+// let video = document.createElement('VIDEO');
 
 
 async function getFetch() {
@@ -61,63 +64,48 @@ async function getFetch() {
       imgDish.style.borderRadius = "0px";
     });
 
-    console.log(meals);
     // Ouvre une fenêtre modale au click
     imgDish.addEventListener('click', () => {
       modal.append(contentMeal);
       contentMeal.prepend(nameMeal);
+      nameMeal.classList.add('modalNameMeal');
       modalLeft.append(imgDish, from, description);
-      modalRight.append(ingredients);
-      modalVideo.append(video);
+      modalRight.append(ingredients, modalVideo);
 
-      nameMeal.style.width = "100%";
       from.textContent += meals.strArea; // Origine du plat
-      description.textContent = meals.strInstructions; // Instruction de la Recette
-      video.src = meals.strYoutube;
-      video.autoplay = false;
-      video.controls = true;
-      video.muted = false;
-      video.height = "240px";
-      video.width = "320px";
-
-      if (video.canPlayType('video/mp4')) {
-  console.log('set src to mp4 video');
-
-  video.src = 'my-video.mp4'
-} else if (video.canPlayType('video/ogg')) {
-  console.log('set src to ogg video');
-
-  video.src = 'my-video.ogg'
-} else {
-  console.log('provide link to user');
-}
+      description.innerHTML = `<h4 style="color:#538deb">Instructions : </h4><br>` + meals.strInstructions; // Instruction de la Recette
+      modalVideo.innerHTML = `
+        <h4>Need some help ? </h4>
+          <p id="textModalVideo">You don't any idea about how to make the recipe...No problem, you have a guide there below</p>
+          <a href="https://www.youtube.com/" id="link">
+            <img src="/ECF/public/image/youtube.png" alt="logo-mail" id="logoYT">YouTube
+          </a>
+      `;
 
       // Si l'ingrédient == null. Alors l'ingrédient ne prendra aucune valeur sinon crée <p> Nom Ingrédient </p>
-      meals.strIngredient1 === null ? meals.strIngredient1 = "" : ingredients.innerHTML = `<p>${meals.strIngredient1}</p>`;
-      meals.strIngredient2 === null ? meals.strIngredient2 = "" : ingredients.innerHTML += `<p>${meals.strIngredient2}</p>`;
-      meals.strIngredient3 === null ? meals.strIngredient3 = "" : ingredients.innerHTML += `<p>${meals.strIngredient3}</p>`;
-      meals.strIngredient4 === null ? meals.strIngredient4 = "" : ingredients.innerHTML += `<p>${meals.strIngredient4}</p>`;
-      meals.strIngredient5 === null ? meals.strIngredient5 = "" : ingredients.innerHTML += `<p>${meals.strIngredient5}</p>`;
-      meals.strIngredient6 === null ? meals.strIngredient6 = "" : ingredients.innerHTML += `<p>${meals.strIngredient6}</p>`;
-      meals.strIngredient7 === null ? meals.strIngredient7 = "" : ingredients.innerHTML += `<p>${meals.strIngredient7}</p>`;
-      meals.strIngredient8 === null ? meals.strIngredient8 = "" : ingredients.innerHTML += `<p>${meals.strIngredient8}</p>`;
-      meals.strIngredient9 === null ? meals.strIngredient9 = "" : ingredients.innerHTML += `<p>${meals.strIngredient9}</p>`;
-      meals.strIngredient10 === null ? meals.strIngredient10 = "" : ingredients.innerHTML += `<p>${meals.strIngredient10}</p>`;
-      meals.strIngredient11 === null ? meals.strIngredient11 = "" : ingredients.innerHTML += `<p>${meals.strIngredient11}</p>`;
-      meals.strIngredient12 === null ? meals.strIngredient12 = "" : ingredients.innerHTML += `<p>${meals.strIngredient12}</p>`;
-      meals.strIngredient13 === null ? meals.strIngredient13 = "" : ingredients.innerHTML += `<p>${meals.strIngredient13}</p>`;
-      meals.strIngredient14 === null ? meals.strIngredient14 = "" : ingredients.innerHTML += `<p>${meals.strIngredient14}</p>`;
-      meals.strIngredient15 === null ? meals.strIngredient15 = "" : ingredients.innerHTML += `<p>${meals.strIngredient15}</p>`;
-      meals.strIngredient16 === null ? meals.strIngredient16 = "" : ingredients.innerHTML += `<p>${meals.strIngredient16}</p>`;
-      meals.strIngredient17 === null ? meals.strIngredient17 = "" : ingredients.innerHTML += `<p>${meals.strIngredient17}</p>`;
-      meals.strIngredient18 === null ? meals.strIngredient18 = "" : ingredients.innerHTML += `<p>${meals.strIngredient18}</p>`;
-      meals.strIngredient19 === null ? meals.strIngredient19 = "" : ingredients.innerHTML += `<p>${meals.strIngredient19}</p>`;
-      meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML += `<p>${meals.strIngredient20}</p>`;
+      meals.strIngredient1 === null ? meals.strIngredient1 = "" : ingredients.innerHTML = `<p class="ingredient">${meals.strIngredient1}</p>`;
+      meals.strIngredient2 === null ? meals.strIngredient2 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient2}</p>`;
+      meals.strIngredient3 === null ? meals.strIngredient3 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient3}</p>`;
+      meals.strIngredient4 === null ? meals.strIngredient4 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient4}</p>`;
+      meals.strIngredient5 === null ? meals.strIngredient5 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient5}</p>`;
+      meals.strIngredient6 === null ? meals.strIngredient6 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient6}</p>`;
+      meals.strIngredient7 === null ? meals.strIngredient7 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient7}</p>`;
+      meals.strIngredient8 === null ? meals.strIngredient8 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient8}</p>`;
+      meals.strIngredient9 === null ? meals.strIngredient9 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient9}</p>`;
+      meals.strIngredient10 === null ? meals.strIngredient10 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient10}</p>`;
+      meals.strIngredient11 === null ? meals.strIngredient11 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient11}</p>`;
+      meals.strIngredient12 === null ? meals.strIngredient12 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient12}</p>`;
+      meals.strIngredient13 === null ? meals.strIngredient13 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient13}</p>`;
+      meals.strIngredient14 === null ? meals.strIngredient14 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient14}</p>`;
+      meals.strIngredient15 === null ? meals.strIngredient15 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient15}</p>`;
+      meals.strIngredient16 === null ? meals.strIngredient16 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient16}</p>`;
+      meals.strIngredient17 === null ? meals.strIngredient17 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient17}</p>`;
+      meals.strIngredient18 === null ? meals.strIngredient18 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient18}</p>`;
+      meals.strIngredient19 === null ? meals.strIngredient19 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient19}</p>`;
+      meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient20}</p>`;
 
       modal.showModal();
     })
-
-
   }
 }
 
