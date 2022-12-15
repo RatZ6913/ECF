@@ -18,7 +18,6 @@ async function getFetch() {
     let getData = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
     let showData = await getData.json();
     let meals = showData.meals[0];
-    // console.log(showData);
 
     // Création : <DIV> à chaque itération et l'insérer dans la Section(Content)
     let boxDish = document.createElement("div");
