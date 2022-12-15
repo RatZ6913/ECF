@@ -35,6 +35,10 @@ h3 {
   text-transform: uppercase;
 }
 
+strong {
+  text-decoration: underline;
+}
+
 h2 {
   font-size: 22px;
 }
