@@ -95,6 +95,11 @@ nav ul li a {
   padding: 2px 7px;
 }
 
+nav ul li a:hover {
+  color: var(--color-white);
+  background-color: var(--color-gray);
+}
+
 /* PARTIE HAUT DE PAGE : PRÉSENTATION  */
 #top-left {
   display: flex;
@@ -221,7 +226,6 @@ span img {
 
 /* Stylisation des Images */
 .imgDish {
-  /* margin: auto; */
   margin-top: 20px;
   width: 250px;
   height: 250px;
@@ -298,7 +302,7 @@ footer section {
 #footer-right {
   width: 35%;
   /* margin: 50px auto; */
-  background-color: var(--color-white);
+  background-color: var(--color-gray);
 }
 
 #footer-right a {
@@ -306,7 +310,7 @@ footer section {
 }
 
 #footer-right span {
-  color: var(--color-gray);
+  color: var(--color-white);
   margin-left: 15%;
   font-size: 16px;
 }
@@ -423,7 +427,7 @@ h5 a {
   color: var(--color-white);
   border: 1px solid var(--color-gray);
   padding: 2px 5px;
-  border-radius: 5px;
+  border-radius: px;
   background-color: var(--color-secondary);
   cursor: pointer;
 }
@@ -432,6 +436,7 @@ h5 a {
   margin-right: 15px;
   place-self: center;
   vertical-align: text-bottom;
+  border-radius: 10px;
 }
 
 #textModalVideo {

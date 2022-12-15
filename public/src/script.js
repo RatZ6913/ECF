@@ -73,6 +73,7 @@ async function getFetch() {
       modalLeft.append(imgDish, from, description);
       modalRight.append(ingredients, modalVideo);
 
+
       from.textContent = meals.strArea; // Origine du plat
       description.innerHTML = `<h4 style="color:#538deb">Instructions : </h4><br>` + meals.strInstructions; // Instruction de la Recette
       modalVideo.innerHTML = `
@@ -105,8 +106,18 @@ async function getFetch() {
       meals.strIngredient19 === null ? meals.strIngredient19 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient19}</p>`;
       meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient20}</p>`;
 
-      modal.style.transition = "2s";
+      // modal.style.transition = "2s";
       modal.showModal();
+
+      // J'ajoute un évènement qui empêche de fermer le Modale : avec Touche "Echap"
+      addEventListener('keydown', (e)=> {        
+        switch(e.keyCode){
+          case 27:
+            e.returnValue = false;
+            e.keyCode = 0;
+            break;
+        }
+      })
     })
 
     closeModal.addEventListener('click', () => {
@@ -119,16 +130,3 @@ async function getFetch() {
 
 getFetch();
 
-// addEventListener('keydown', (e) => {
-//   console.log(e);
-//   // console.log(e);
-//   keyEscape = e.keyCode;
-
-//   let escape = e.keyCode;
-
-//   if(e.keyCode == 27){
-//     e.keyCode = null;
-//     console.log(e.keyCode);
-//   }
-
-// })
