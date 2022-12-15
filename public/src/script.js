@@ -14,7 +14,7 @@ closeModal.classList.add('closeModal');
 
 
 async function getFetch() {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     let getData = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
     let showData = await getData.json();
     let meals = showData.meals[0];
@@ -33,7 +33,7 @@ async function getFetch() {
     let nameMeal = document.createElement('h4');
     nameMeal.classList.add('nameMeal');
     nameMeal.textContent = meals.strMeal;
-    let arrDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    let arrDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let days = document.createElement('p');
     days.style.textAlign = "center";
     days.style.color = "#707070";
@@ -73,12 +73,12 @@ async function getFetch() {
       modalLeft.append(imgDish, from, description);
       modalRight.append(ingredients, modalVideo);
 
-      from.textContent += meals.strArea; // Origine du plat
+      from.textContent = meals.strArea; // Origine du plat
       description.innerHTML = `<h4 style="color:#538deb">Instructions : </h4><br>` + meals.strInstructions; // Instruction de la Recette
       modalVideo.innerHTML = `
         <h4>Need some help ? </h4>
           <p id="textModalVideo">You don't any idea about how to make the recipe...No problem, you have a guide there below</p>
-          <a href="https://www.youtube.com/" id="link">
+          <a href=${meals.strYoutube} id="link">
             <img src="/ECF/public/image/youtube.png" alt="logo-mail" id="logoYT">YouTube
           </a>
       `;
@@ -105,16 +105,30 @@ async function getFetch() {
       meals.strIngredient19 === null ? meals.strIngredient19 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient19}</p>`;
       meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient20}</p>`;
 
+      modal.style.transition = "2s";
       modal.showModal();
     })
 
-    modal.addEventListener('click', () => {
+    closeModal.addEventListener('click', () => {
       modal.close();
-      boxDish.append(figure, imgDish, nameMeal)
+      boxDish.append(figure, imgDish, nameMeal);
+      nameMeal.classList.remove('modalNameMeal');
     })
   }
-}
+} 
 
 getFetch();
 
+// addEventListener('keydown', (e) => {
+//   console.log(e);
+//   // console.log(e);
+//   keyEscape = e.keyCode;
 
+//   let escape = e.keyCode;
+
+//   if(e.keyCode == 27){
+//     e.keyCode = null;
+//     console.log(e.keyCode);
+//   }
+
+// })

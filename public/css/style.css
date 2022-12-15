@@ -260,7 +260,7 @@ footer h2 {
 
 footer h3 {
   width: auto;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   border: none;
   text-decoration: 3px underline;
 }
@@ -374,7 +374,8 @@ h5 a {
   flex-direction: column;
   justify-content: space-between;
   background-image: url(/ECF/public/image/ingredients-bg.png);
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #modal-right h4 {
