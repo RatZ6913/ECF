@@ -9,8 +9,8 @@ let description = document.createElement('p');
 description.classList.add('description');
 let modalVideo = document.createElement('div');
 modalVideo.classList.add('modalVideo');
-// let modalVideo = document.querySelector('#modalVideo');
-// let video = document.createElement('VIDEO');
+let closeModal = document.createElement('button');
+closeModal.classList.add('closeModal');
 
 
 async function getFetch() {
@@ -66,6 +66,7 @@ async function getFetch() {
 
     // Ouvre une fenêtre modale au click
     imgDish.addEventListener('click', () => {
+      modal.prepend(closeModal);
       modal.append(contentMeal);
       contentMeal.prepend(nameMeal);
       nameMeal.classList.add('modalNameMeal');
@@ -105,6 +106,10 @@ async function getFetch() {
       meals.strIngredient20 === null ? meals.strIngredient20 = "" : ingredients.innerHTML += `<p class="ingredient">${meals.strIngredient20}</p>`;
 
       modal.showModal();
+    })
+
+    modal.addEventListener('click', () => {
+      modal.close();
     })
   }
 }

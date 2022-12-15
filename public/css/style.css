@@ -244,7 +244,7 @@ span img {
 
 /* PARTIE : FOOTER  */
 footer {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   padding-top: 5px;
   margin-top: 15px;
 }
@@ -252,7 +252,7 @@ footer {
 footer h2 {
   color: var(--color-primary);
   background-color: var(--color-white);
-  border: 5px solid var(--color-primary);
+  border: 1px solid var(--color-gray);
   margin: 10px auto;
   text-align: center;
   width: 25%;
@@ -260,7 +260,7 @@ footer h2 {
 
 footer h3 {
   width: auto;
-  color: var(--color-white);
+  color: var(--color-secondary);
   border: none;
   text-decoration: 3px underline;
 }
@@ -274,7 +274,6 @@ footer section {
 #footer-left {
   background-color: var(--color-gray);
   width: 35%;
-  /* margin: 50px auto; */
   padding-bottom: 15px;
 }
 
@@ -292,30 +291,35 @@ footer section {
 #separator {
   width: 1px;
   height: auto;
-  background-color: #f2fbff;
+  background-color: var(--color-white);
 }
 
 /* PARTIE : CREDITS  */
 #footer-right {
   width: 35%;
   /* margin: 50px auto; */
-  background-color: var(--color-gray);
+  background-color: var(--color-white);
 }
 
 #footer-right a {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 #footer-right span {
-  color: var(--color-white);
+  color: var(--color-gray);
   margin-left: 15%;
   font-size: 16px;
 }
 
-h6 {
+h5 {
   text-align: center;
   margin: 0;
   color: var(--color-white);
+}
+
+h5 a {
+  color: #960d0d;
+  font-weight: 700;
 }
 
 /* PARTIE : MODALE  */
@@ -335,6 +339,16 @@ h6 {
   background-color: #e6621c;
   opacity: 30%;
   border: none;
+}
+
+.closeModal {
+  background-image: url(/ECF/public/image/close.png);
+  background-size: contain;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 #contentMeal {
