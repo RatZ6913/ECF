@@ -21,13 +21,13 @@ async function getFetch() {
     // console.log(showData);
 
     // Création : <DIV> à chaque itération et l'insérer dans la Section(Content)
-    let boxInContent = document.createElement("div");
-    boxInContent.classList.add("boxDish");
-    content.append(boxInContent);
+    let boxDish = document.createElement("div");
+    boxDish.classList.add("boxDish");
+    content.append(boxDish);
 
-    // Création : <FIGURE>(pour le référencement) à chaque itération et l'insérer dans la Div(boxInContent)
+    // Création : <FIGURE>(pour le référencement) à chaque itération et l'insérer dans la Div(boxDish)
     let figure = document.createElement("figure");
-    boxInContent.append(figure);
+    boxDish.append(figure);
 
     // Création Titre du plat et texte pour le jour
     let nameMeal = document.createElement('h4');
@@ -38,10 +38,10 @@ async function getFetch() {
     days.style.textAlign = "center";
     days.style.color = "#707070";
     days.textContent = arrDays[i];
-    boxInContent.append(nameMeal);
+    boxDish.append(nameMeal);
     figure.prepend(days);
 
-    // Création : <IMAGE> à chaque itération et l'insérer dans la Div(boxInContent)
+    // Création : <IMAGE> à chaque itération et l'insérer dans la Div(boxDish)
     let imgDish = document.createElement("img");
     imgDish.classList.add("imgDish");
     figure.append(imgDish);
@@ -110,6 +110,7 @@ async function getFetch() {
 
     modal.addEventListener('click', () => {
       modal.close();
+      boxDish.append(figure, imgDish, nameMeal)
     })
   }
 }
