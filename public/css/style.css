@@ -456,10 +456,9 @@ h5 a {
   margin-left: 75%;
 }
 
-.social {
-  margin: 5px;
-  width: 24px;
-  background-color: wheat;
+#social {
+  margin: auto;
+  text-align: center;
 }
 
 /* Paramètres pour le responsiv */
