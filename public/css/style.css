@@ -112,7 +112,6 @@ nav ul li a:hover {
   flex-wrap: wrap;
   width: 40%;
   margin: auto;
-  background-color: red;
   background-color: var(--color-gray);
   height: 87.5vh;
 }
@@ -306,7 +305,7 @@ footer section {
 /* PARTIE : CREDITS  */
 #footer-right {
   width: 35%;
-  background-color: #295a29;
+  background-color: var(--color-green);
   border-radius: 5% 35% 5% 35%;
 }
 
@@ -345,7 +344,7 @@ h5 a {
 }
 
 #modal::backdrop {
-  background-color: #e6621c;
+  background-color: var(--color-primary);
   opacity: 30%;
   border: none;
 }
@@ -429,10 +428,9 @@ h5 a {
 
 #link {
   text-decoration: none;
-  color: var(--color-white);
-  border: 1px solid var(--color-gray);
+  color: red;
   border-radius: px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-white);
   cursor: pointer;
   border-radius: 5px;
   padding: 5px;
