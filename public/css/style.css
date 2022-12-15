@@ -455,8 +455,7 @@ h5 a {
 }
 
 #arrow {
-  display: block;
-  margin: auto;
+  margin-left: 75%;
 }
 
 /* Paramètres pour le responsiv */
@@ -534,6 +533,11 @@ h5 a {
   #mid-right p {
     margin: 0px 1rem;
     letter-spacing: 0;
+  }
+
+  #arrow {
+  display: block;
+  margin: auto;
   }
 
   #info {
