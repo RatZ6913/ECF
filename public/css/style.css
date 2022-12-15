@@ -5,6 +5,7 @@
 :root {
   --color-primary: #e6621c;
   --color-secondary: #538deb;
+  --color-green: #295a29;
   --color-gray: #707070;
   --color-white: #f2fbff;
   --font-family-title: "Dancing Script", cursive;
@@ -91,13 +92,13 @@ nav ul li {
 nav ul li a {
   background-color: var(--color-white);
   text-decoration: none;
-  color: var(--color-gray);
+  color: var(--color-green);
   padding: 2px 7px;
 }
 
 nav ul li a:hover {
+  background-color: var(--color-green);
   color: var(--color-white);
-  background-color: var(--color-gray);
 }
 
 /* PARTIE HAUT DE PAGE : PRÉSENTATION  */
@@ -176,7 +177,7 @@ figure {
   text-align: right;
   margin-right: 10%;
   margin-top:15%;
-  color: var(--color-secondary);
+  color: var(--color-white);
   font-weight: 700;
 }
 
@@ -248,15 +249,14 @@ span img {
 
 /* PARTIE : FOOTER  */
 footer {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   padding-top: 5px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 footer h2 {
-  color: var(--color-primary);
+  color: var(--color-green);
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray);
   margin: 10px auto;
   text-align: center;
   width: 25%;
@@ -264,7 +264,7 @@ footer h2 {
 
 footer h3 {
   width: auto;
-  color: var(--color-primary);
+  color: var(--color-white);
   border: none;
   text-decoration: 3px underline;
 }
@@ -276,9 +276,10 @@ footer section {
 
 /* PARTIE COORDONNÉES  */
 #footer-left {
-  background-color: var(--color-gray);
+  background-color: var(--color-green);
   width: 35%;
   padding-bottom: 15px;
+  border-radius: 35% 5% 35% 5%;
 }
 
 #footer-left img {
@@ -301,8 +302,8 @@ footer section {
 /* PARTIE : CREDITS  */
 #footer-right {
   width: 35%;
-  /* margin: 50px auto; */
-  background-color: var(--color-gray);
+  background-color: #295a29;
+  border-radius: 5% 35% 5% 35%;
 }
 
 #footer-right a {
@@ -322,7 +323,7 @@ h5 {
 }
 
 h5 a {
-  color: #960d0d;
+  color: var(--color-secondary);
   font-weight: 700;
 }
 
@@ -430,6 +431,8 @@ h5 a {
   background-color: var(--color-secondary);
   cursor: pointer;
   border-radius: 5px;
+  padding: 5px;
+  margin: 15px;
 }
 
 #logoYT {
@@ -438,11 +441,15 @@ h5 a {
 }
 
 #textModalVideo {
-  margin: 0;
+  margin-bottom: 1rem;
   font-size: 14px;
   color: var(--color-white);
 }
 
 .measure {
   color: var(--color-secondary);
+}
+
+#arrow {
+  margin-left: 75%;
 }

@@ -78,15 +78,12 @@ async function getFetch() {
       from.textContent = meals.strArea; // Origine du plat
       description.innerHTML = `<h4 style="color:#538deb">Instructions : </h4><br>` + meals.strInstructions; // Instruction de la Recette
       modalVideo.innerHTML = `
-        <h4>Need some help ? </h4>
+        <h4 style="color:#538deb">Need some help ? </h4>
           <p id="textModalVideo">You don't any idea about how to make the recipe...No problem, you have a guide there below</p>
           <a href=${meals.strYoutube} id="link">
             <img src="/ECF/public/image/youtube.png" alt="logo-mail" id="logoYT">YouTube
           </a>
       `;
-
-      
-
 
       // modal.style.transition = "2s";
       modal.showModal();
