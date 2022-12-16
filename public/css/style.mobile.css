@@ -1,3 +1,4 @@
+/* Responsive Pour Format Petit écran  */
 nav {
   margin: 0;
   padding: 0;
@@ -97,6 +98,7 @@ nav ul li a {
   width: 95vw;
   background-size: cover;
   height: 20vh;
+  margin-top: 0;
 }
 
 .nameMeal {
