@@ -76,6 +76,11 @@ async function getFetch() {
       modalLeft.append(imgDish, from, description);
       modalRight.append(ingredients, modalVideo);
 
+      imgDish.style.transition = "";
+      imgDish.style.backgroundImage = "";
+      
+     
+      
       // J'appelle ma fonction ingredients();
       ingredient(meals);
 
@@ -122,7 +127,6 @@ async function getFetch() {
 }
 
 getFetch();
-
 
 // Ma Fonction pour les ingrédients
 // Si Ingrédient ou Mesure est égals à Null , alors : Null = "" (none). Sinon false , ingredient et measure afficheront leurs valeurs respectives

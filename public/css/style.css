@@ -227,7 +227,7 @@ figure {
   margin:15px 5%;
 }
 
-/* Stylisation des Images */
+/* Stylisation des Images API cliquables */
 .imgDish {
   margin-top: 20px;
   width: 250px;
@@ -344,6 +344,16 @@ h5 a {
   border-radius: 15px;
   background-image: url(/ECF/public/image/modal-bg1.png);
   background-size: cover;
+  animation: modal 0.9s ease;
+}
+
+@keyframes modal {
+  from {
+    transform: translate(-0%, -25%);
+  }
+  to {
+    transform: translate(0%);
+  }
 }
 
 #modal::backdrop {
