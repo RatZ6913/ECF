@@ -48,7 +48,7 @@ async function getFetch() {
       "url('" + meals.strMealThumb + "')";
 
     // Changement d'image pour informer l'utilisateur que l'image est clickable
-    imgDish.addEventListener("mouseover", () => {
+    imgDish.addEventListener("mouseover touchmove", () => {
       imgDish.style.backgroundImage = "";
       imgDish.style.transition = "1s";
       imgDish.style.borderRadius = "50%";
@@ -57,7 +57,7 @@ async function getFetch() {
     });
 
     // Reprends ses valeurs de base à la sortie de l'image
-    imgDish.addEventListener("mouseleave", () => {
+    imgDish.addEventListener("mouseleave touchmove", () => {
       imgDish.style.backgroundImage =
         "url('" + meals.strMealThumb + "')";
       imgDish.style.transition = "0.5s";
@@ -78,7 +78,7 @@ async function getFetch() {
       modalRight.append(ingredients, modalVideo);
 
       // J'enlève la transistion de l'effet over de l'image
-      imgDish.addEventListener("mouseover", () => {
+      imgDish.addEventListener("mouseover touchmove", () => {
         imgDish.style.backgroundImage = "";
         imgDish.style.transition = "";
         imgDish.style.borderRadius = "";
@@ -123,7 +123,7 @@ async function getFetch() {
       })
     })
 
-    closeModal.addEventListener('click', (e) => {
+    closeModal.addEventListener('click touchmove', (e) => {
       modal.close(); // Ferme la Modale 
       boxDish.append(figure, imgDish, nameMeal); // Dans la Div boxDish , je replace les noeuds, dont j'ai utilisé pour la modale
       nameMeal.classList.remove('modalNameMeal');
