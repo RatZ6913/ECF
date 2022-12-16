@@ -65,7 +65,7 @@ async function getFetch() {
     });
 
     // Ouvre une fenêtre modale au click
-    imgDish.addEventListener('click', () => {
+    imgDish.addEventListener('click', (e) => {
       // Affiche la fenêtre du Modal 
       modal.showModal();
 
@@ -100,7 +100,7 @@ async function getFetch() {
 
       // Désactive le scroll arrière-plan 
       body.style.position = "fixed"; 
-
+      
       // J'ajoute un évènement qui empêche de fermer la Modale, une fois à l'intérieur : avec Touche "Echap". 
       // (Car ça crée des conflits)
       addEventListener('keydown', (e) => {
@@ -113,7 +113,7 @@ async function getFetch() {
       })
     })
 
-    closeModal.addEventListener('click', () => {
+    closeModal.addEventListener('click', (e) => {
       modal.close(); // Ferme la Modale 
       boxDish.append(figure, imgDish, nameMeal); // Dans la Div boxDish , je replace les noeuds, dont j'ai utilisé pour la modale
       nameMeal.classList.remove('modalNameMeal');
