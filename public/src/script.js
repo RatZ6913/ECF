@@ -65,7 +65,7 @@ async function getFetch() {
     });
 
     // Ouvre une fenêtre modale au click
-    imgDish.addEventListener('click', (e) => {
+    imgDish.addEventListener('click touchmove', (e) => {
       // Affiche la fenêtre du Modal 
       modal.showModal();
 
