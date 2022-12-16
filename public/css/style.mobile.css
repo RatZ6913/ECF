@@ -145,3 +145,7 @@ h5 {
   background-color: var(--color-white);
   color: var(--color-gray);
 }
+
+#textModalVideo {
+  display: table-column;
+}

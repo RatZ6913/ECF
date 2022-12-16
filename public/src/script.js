@@ -53,6 +53,7 @@ async function getFetch() {
       imgDish.style.transition = "1s";
       imgDish.style.borderRadius = "50%";
       imgDish.style.border = "none";
+      imgDish.style.backgroundImage = "url(/ECF/public/image/click.jpg)";
     });
 
     // Reprends ses valeurs de base à la sortie de l'image
@@ -76,21 +77,16 @@ async function getFetch() {
       modalLeft.append(imgDish, from, description);
       modalRight.append(ingredients, modalVideo);
 
-      imgDish.style.transition = "";
-      imgDish.style.backgroundImage = "";
-      
-     
-      
       // J'appelle ma fonction ingredients();
       ingredient(meals);
-
+ 
       from.textContent = "Origin : " + meals.strArea; // Origine du plat
       description.innerHTML = `<h4 style="color:#538deb">Instructions : </h4><br>` + meals.strInstructions; // Instruction de la Recette
 
       // Si True Alors Affiche le lien de la vidéo de la recette vers YouTube / Si False alors, lui avertir qu'il n'y a pas de lien
       if (meals.strYoutube != "") {
         modalVideo.innerHTML = `
-        <h4 style="color:#538deb">Need some help ? </h4>
+        <h4 style="color:#f2fbff;text-decoration:underline">Need a guide ? </h4>
           <p id="textModalVideo">You don't any idea about how to make the recipe...No problem, you have a guide there below</p>
           <a href=${meals.strYoutube} target="_blank" id="link">
             <img src="/ECF/public/image/youtube.png" alt="logo-mail" id="logoYT">YouTube
@@ -98,7 +94,7 @@ async function getFetch() {
       } else if (meals.strYoutube == "") {
         modalVideo.innerHTML = `
         <h4 style="color:#538deb"> Oups, sorry we cannot help you </h4>
-        <p id="textModalVideo">We don't have any video available yet, sorry !</p>
+        <p id="textModalVideo">We don't have any video available yet for this meal, sorry !</p>
         `;
       }
 
