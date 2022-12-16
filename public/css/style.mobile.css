@@ -10,11 +10,12 @@ nav {
   background: center;
   border-radius: 50%;
 }
+
 figure:nth-child(2n) {
   background-color: var(--color-primary);
 }
 
-nav ul {
+#nav-mobile {
   /* display: none; */
   width: 5%;
   flex-direction: column;
@@ -40,7 +41,8 @@ nav ul li a {
 
 #logo {
   margin: 0;
-  background-color: ;
+  border-right: 5px groove var(--color-primary);
+  cursor: pointer;
 }
 
 #top-page {
