@@ -437,6 +437,12 @@ h5 a {
   margin: 15px;
 }
 
+#link:hover {
+  color: var(--color-white);
+  background-color: var(--color-gray);
+  border: 1px solid var(--color-white);
+}
+
 #logoYT {
   margin-right: 15px;
   vertical-align: text-bottom;
