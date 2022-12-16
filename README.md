@@ -10,7 +10,7 @@ avec leurs recettes (ingrédients, dosages, et en bonus une vidéo YouTube si di
 
 J'ai choisi les couleurs : 
 - Orange/Rouge : Pour Rappeler les saveurs, la chaleur, sauce des plats le plaisir gustative...
-- Bleu : Pour rappeler la fraîcheur des aliments, que les aliments sont frais, monter que le site respecte la chaîne du froid
+- Bleu : Pour rappeler la fraîcheur des aliments, que les aliments sont frais
 - Vert : Rappelle aussi la fraîcheur, mais plus dans les fruits et légumes. Et les herbes aromatiques
 
 
