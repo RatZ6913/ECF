@@ -22,7 +22,7 @@ figure:nth-child(2n) {
   margin: 0;
   padding: 0;
   transition: 2s;
-  translate: 200%;
+  translate: 20%;
 }
 
 nav ul li {
