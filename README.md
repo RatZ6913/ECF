@@ -5,7 +5,7 @@ Le projet n'est pas totalement fini, à corriger certains détails.
 
 Html, Css, JavaScript (Natif)
 
-Mon site, suggère des plats du Lundi - Samedi. Car les personnes pourront aller faire leurs courses si ils leur manque un ingrédient. Les utilisateurs auront des plats suggéreé par le site
+Mon site, suggère des plats du Lundi - Samedi. Car les personnes pourront aller faire leurs courses si ils leur manque un ingrédient. Les utilisateurs auront des plats suggéré par le site
 avec leurs recettes (ingrédients, dosages, et en bonus une vidéo YouTube si disponible).
 
 J'ai choisi les couleurs : 
