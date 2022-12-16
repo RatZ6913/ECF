@@ -1,7 +1,9 @@
 # ECF
 ECF
 
+Le projet n'est pas totalement fini, à corriger certains détails.
 
+Html, Css, JavaScript (Natif)
 
 Mon site, suggère des plats du Lundi - Samedi. Car les personnes pourront aller faire leurs courses si il leur manque un ingrédient. Les utilisateurs auront des plats suggérer par le site
 avec leurs recettes (ingrédients, dosages, et en bonus une vidéo YouTube si disponible).
@@ -20,3 +22,7 @@ J'ai changé certains éléments de base (qui étaient à la maquette), car apr�
 
 Le but étant de donner envie aux utilisateurs de cuisiner, ou de goùter à de nouvelles saveurs, seul ou avec leurs proches, amis, famille.. De partager un moment de convivialité.
 
+Source :
+  https://www.themealdb.com/ : API
+  https://www.pexels.com/fr-fr/ : Image Libre de Droits
+  https://icones8.fr/ : Icône
