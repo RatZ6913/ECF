@@ -13,7 +13,6 @@ modalVideo.classList.add('modalVideo');
 let closeModal = document.createElement('button');
 closeModal.classList.add('closeModal');
 
-
 async function getFetch() {
   for (let i = 0; i < 6; i++) {
     let getData = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");

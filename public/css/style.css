@@ -11,7 +11,7 @@
   --font-family-title: "Dancing Script", cursive;
   --font-family-text: "Noto Sans JP", sans-serif;
 }
-/* ff0000 */
+
 /* Reset Du Body  */
 body {
   margin: 0;
@@ -35,10 +35,6 @@ h3 {
   text-transform: uppercase;
 }
 
-strong {
-  text-decoration: underline;
-}
-
 h2 {
   font-size: 22px;
 }
@@ -55,17 +51,8 @@ h3 {
   border-bottom-left-radius: 25px;
 }
 
-/* DISCLAIMER, C'est important */
-.disclaimer {
-  display: block;
-  width: 50%;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 15px auto;
-  color: var(--color-primary);
-  border: 5px outset var(--color-secondary);
-  transition: 1s;
-  font-weight: bold;
+strong {
+  text-decoration: underline;
 }
 
 /* BARRE DE NAVIGATION  */
@@ -105,30 +92,7 @@ nav ul li a:hover {
   color: var(--color-white);
 }
 
-/* PARTIE HAUT DE PAGE : PRÉSENTATION  */
-#top-left {
-  display: flex;
-  position: absolute;
-  flex-wrap: wrap;
-  width: 40%;
-  margin: auto;
-  background-color: var(--color-gray);
-  height: 87.5vh;
-}
-
-#top-left h1 {
-  padding-top: 15px;
-  text-align: center;
-  margin: auto;
-}
-
-#top-left p {
-  margin: 0 10%;
-  color: var(--color-white);
-  letter-spacing: 2px;
-}
-
-/* IMAGE DE FOND : HAUT DE PAGE  */
+/* IMAGE BACKGROUND FIXED */
 figure {
   margin: 0;
 }
@@ -152,6 +116,42 @@ figure {
   background-position: left;
   height: 70vh;
   margin-right: auto;
+}
+
+/* PARTIE HAUT DE PAGE : PRÉSENTATION  */
+#top-left {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  width: 40%;
+  margin: auto;
+  background-color: var(--color-gray);
+  height: 87.5vh;
+}
+
+#top-left h1 {
+  padding-top: 15px;
+  text-align: center;
+  margin: auto;
+}
+
+#top-left p {
+  margin: 0 10%;
+  color: var(--color-white);
+  letter-spacing: 2px;
+}
+
+/* DISCLAIMER, C'est important */
+.disclaimer {
+  display: block;
+  width: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px auto;
+  color: var(--color-primary);
+  border: 5px outset var(--color-secondary);
+  transition: 1s;
+  font-weight: bold;
 }
 
 /* PARTIE : MILIEU DE PAGE : SUGGESTIONS */
@@ -178,15 +178,14 @@ figure {
 #info {
   display: block;
   text-align: right;
-  margin-right: 10%;
-  margin-top:15%;
+  margin-right: 2rem;
+  margin-top:1rem;
   color: #1364a7;
   font-weight: 700;
 }
 
-span img {
-  margin-top: 5%;
-  margin-right: 15%;
+#arrow {
+  margin-left: 75%;
 }
 
 /* ARTICLES : SUGGESTIONS DE PLATS  */
@@ -247,7 +246,6 @@ span img {
   text-align: center;
   margin: auto;
   display: block;
-  /* width: 100%; */
 }
 
 /* PARTIE : FOOTER  */
@@ -277,7 +275,7 @@ footer section {
   justify-content: space-around;
 }
 
-/* PARTIE COORDONNÉES  */
+/* PARTIE INFORMATIONS  */
 #footer-left {
   background-color: var(--color-green);
   width: 35%;
@@ -330,6 +328,11 @@ h5 a {
   font-weight: 700;
 }
 
+#social {
+  margin: auto;
+  text-align: center;
+}
+
 /* PARTIE : MODALE  */
 #modal {
   border: none;
@@ -349,16 +352,7 @@ h5 a {
   border: none;
 }
 
-.closeModal {
-  background-image: url(/ECF/public/image/close.png);
-  background-size: contain;
-  border: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
+/* Boîte Principal :à l'intérieur de la fenêtre modale */
 #contentMeal {
   width: 100%;
   height: 90vh;
@@ -367,6 +361,17 @@ h5 a {
   justify-content: space-around;
 }
 
+/* Titre du Plat : Modale  */
+.modalNameMeal {
+  color: #707070;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  width: 100%;
+}
+
+/* Boîte Gauche de la Modale  */
 #modal-left {
   background-color: var(--color-white);
   width: 45%;
@@ -374,6 +379,21 @@ h5 a {
   overflow-y: scroll;
 }
 
+/* Origine Du plat  */
+#from {
+  text-align: center;
+  color: var(--color-primary);
+}
+
+/* Instructions du plat  */
+.description {
+  width: 80%;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-gray);
+}
+
+/* Boîte Droite de la Modale  */
 #modal-right {
   background-color: var(--color-white);
   width: 50%;
@@ -391,26 +411,7 @@ h5 a {
   color: var(--color-primary);
 }
 
-.modalVideo {
-  height: 15vh;
-  width: 100%;
-  background-color: red;
-}
-
-.modalNameMeal {
-  color: #707070;
-  text-decoration: underline;
-  margin-bottom: 15px;
-  background-color: var(--color-white);
-  border-radius: 15px;
-  width: 100%;
-}
-
-#from {
-  text-align: center;
-  color: var(--color-primary);
-}
-
+/* // Ingrédients + Dosages */
 .ingredient {
   margin: 0;
   font-size: 16px;
@@ -419,13 +420,24 @@ h5 a {
   line-height: 18px;
 }
 
-.description {
-  width: 80%;
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--color-gray);
+.measure {
+  color: var(--color-secondary);
 }
 
+/* Boîte pour la Partie : "Youtube" */
+.modalVideo {
+  height: 15vh;
+  width: 100%;
+  background-color: red;
+}
+
+#textModalVideo {
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: var(--color-white);
+}
+
+/* // Lien de Redirection, Si Link existant  */
 #link {
   text-decoration: none;
   color: red;
@@ -448,23 +460,15 @@ h5 a {
   vertical-align: text-bottom;
 }
 
-#textModalVideo {
-  margin-bottom: 1rem;
-  font-size: 14px;
-  color: var(--color-white);
-}
-
-.measure {
-  color: var(--color-secondary);
-}
-
-#arrow {
-  margin-left: 75%;
-}
-
-#social {
-  margin: auto;
-  text-align: center;
+/* // Fermeture de la Modale : Boutton */
+.closeModal {
+  background-image: url(/ECF/public/image/close.png);
+  background-size: contain;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /* Paramètres pour le responsiv */
@@ -481,9 +485,13 @@ h5 a {
   }
 
   #info {
-    text-align: right;
-    margin-top: 1rem;
-    font-size: 18px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #arrow {
+    margin-left: 45%;
   }
 
   .boxDish figure p {
@@ -547,11 +555,6 @@ h5 a {
   #arrow {
   display: block;
   margin: auto;
-  }
-
-  #info {
-    text-align: center;
-    font-size: 14px;
   }
 
   .disclaimer {
