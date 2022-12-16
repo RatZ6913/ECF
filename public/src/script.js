@@ -77,6 +77,16 @@ async function getFetch() {
       modalLeft.append(imgDish, from, description);
       modalRight.append(ingredients, modalVideo);
 
+      // J'enlève la transistion de l'effet over de l'image
+      imgDish.addEventListener("mouseover", () => {
+        imgDish.style.backgroundImage = "";
+        imgDish.style.transition = "";
+        imgDish.style.borderRadius = "";
+        imgDish.style.cursor = "auto";
+        imgDish.style.backgroundImage =
+        "url('" + meals.strMealThumb + "')";
+      });
+
       // J'appelle ma fonction ingredients();
       ingredient(meals);
  

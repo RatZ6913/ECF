@@ -1,24 +1,46 @@
 /* Responsive Pour Format Petit écran  */
 nav {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   justify-content: space-around;
+  height: 15vh;
+  position: absolute;
+  width: 35%;
+  place-content: center;
+  background: center;
+  border-radius: 50%;
+}
+figure:nth-child(2n) {
+  background-color: var(--color-primary);
 }
 
 nav ul {
-  display: none;
+  /* display: none; */
+  width: 5%;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  transition: 2s;
+  translate: 200%;
+}
+
+nav ul li {
   margin: 0;
   padding: 0;
 }
 
 nav ul li a {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  margin: 2px;
+  width: 100px;
+  font-size: 14px;
+  text-align: left;
+  background-color: var(--color-white);
+  color: var(--color-primary);
 }
 
 #logo {
   margin: 0;
+  background-color: ;
 }
 
 #top-page {
@@ -36,7 +58,9 @@ nav ul li a {
 }
 
 #bg-image1 {
-  position: relative;
+  /* position: relative; */
+  /* top: 150px; */
+  background-attachment: fixed;
   height: auto;
   min-height: 20vh;
   background-size: 100%, cover;
