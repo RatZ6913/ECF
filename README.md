@@ -15,7 +15,7 @@ J'ai choisi les couleurs :
 
 
 
-Nom du site : Flavors Of The Weak ( FOTW )
+Nom du site : Flavors Of The Week ( FOTW )
 
 
 J'ai changé certains éléments de base (qui étaient à la maquette), car après aperçu, le design du site ne correspondait pas à mes attentes. 
