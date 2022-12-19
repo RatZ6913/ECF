@@ -23,6 +23,6 @@ J'ai changé certains éléments de base (qui étaient à la maquette), car apr�
 Le but étant de donner envie aux utilisateurs de cuisiner, ou de goùter à de nouvelles saveurs, seul ou avec leurs proches, amis, famille.. De partager un moment de convivialité.
 
 Source :
-  -API : https://www.themealdb.com/ 
-  -Image Libre de Droits : https://www.pexels.com/fr-fr/ 
-  -Icône : https://icones8.fr/
+  -API : https://www.themealdb.com/ </br>
+  -Image Libre de Droits : https://www.pexels.com/fr-fr/ </br>
+  -Icône : https://icones8.fr/ </br>
