@@ -235,7 +235,7 @@ figure {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  /*background-image: url(../image/click.jpg);*/
+  background-image: url(../image/click.jpg);
   border: 1px solid var(--color-secondary);
   cursor: pointer;
 }
@@ -473,7 +473,7 @@ h5 a {
 
 /* // Fermeture de la Modale : Boutton */
 .closeModal {
-  background-image: url(../public/image/close.png);
+  background-image: url(../image/close.png);
   background-size: contain;
   border: none;
   width: 32px;
