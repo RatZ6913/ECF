@@ -99,7 +99,7 @@ async function getFetch() {
         <h4 style="color:#f2fbff;text-decoration:underline">Need a guide ? </h4>
           <p id="textModalVideo">You don't any idea about how to make the recipe...No problem, you have a guide there below</p>
           <a href=${meals.strYoutube} target="_blank" id="link">
-            <img src="../image/youtube.png" alt="logo-mail" id="logoYT">YouTube
+            <img src="./public/image/youtube.png" alt="logo-mail" id="logoYT">YouTube
           </a> `;
       } else if (meals.strYoutube == "") {
         modalVideo.innerHTML = `
