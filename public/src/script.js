@@ -53,7 +53,7 @@ async function getFetch() {
       imgDish.style.transition = "1s";
       imgDish.style.borderRadius = "50%";
       imgDish.style.border = "none";
-      imgDish.style.backgroundImage = "url(../image/click.jpg)";
+      imgDish.style.backgroundImage = "url(./public/image/click.jpg)";
     });
 
     // Reprends ses valeurs de base à la sortie de l'image
