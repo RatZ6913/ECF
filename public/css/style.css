@@ -235,7 +235,7 @@ figure {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../image/click.jpg);
+  /*background-image: url(../image/click.jpg);*/
   border: 1px solid var(--color-secondary);
   cursor: pointer;
 }
